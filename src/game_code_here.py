@@ -18,7 +18,7 @@ while True:
     screen.fill(classic_blue)
     pygame.display.flip()
 
-    textsurface = myfont.render("We Live in a Soceity"), False, (0, 0, 0))
-    win.blit(textsurface, (10, 10))
-    pygame.display.flip()
+    #textsurface = myfont.render("We Live in a Soceity"), False, (0, 0, 0))
+    #win.blit(textsurface, (10, 10))
+    #pygame.display.flip()
 
