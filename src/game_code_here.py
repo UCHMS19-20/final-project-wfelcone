@@ -8,7 +8,7 @@ screen = pygame.display.set_mode( (1000, 400) )
 
 classic_blue = (15, 76, 129)
 
-myfont=pygame.font.SysFont('Arial', 12)
+myfont=pygame.font.SysFont('Comic Sans MS', 50)
 
 while True:
     for event in pygame.event.get():
@@ -17,7 +17,9 @@ while True:
 
     pygame.time.delay(100)
     screen.fill(classic_blue)
-    textsurface = myfont.render("Sample Text", False, (0, 0, 0))
-    screen.blit(textsurface, (10, 10))
+    textsurface = myfont.render("FORTNITE 2", False, (255, 255, 255))
+    screen.blit(textsurface, (350, 10))
     pygame.display.flip()
 
+    pygame.draw.rect(screen,(255,0,255),(20,20, 20,20))
+    pygame.display.flip()
