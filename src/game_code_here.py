@@ -5,6 +5,7 @@ pygame.font.init()
 pygame.init()
 
 screen = pygame.display.set_mode( (1000, 500) )
+pygame.display.set_caption("Fortnite 2")
 
 #There are the RGB values for all the colors in the game
 classic_blue = (15, 76, 129)
@@ -42,6 +43,7 @@ while True:
         player["y"] += player["velocity"]
 
     pygame.draw.rect(screen, (tangerine_tango), (player["x"], player["y"], player["width"], player["height"]))
+    pygame.draw.rect(screen,(255,0,255),(20,20, 20,20))
     pygame.display.update()
 
     pygame.time.delay(100)
