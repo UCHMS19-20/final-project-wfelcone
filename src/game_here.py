@@ -141,8 +141,10 @@ wall_list.add(wall)
 all_sprite_list.add(wall)
 
 #---Letters-----------------------------------------------
+#The letter that it is is captialized
 
-#maizemazE
+#maize
+#mazE
 
 wall = Wall(740, 20, 40, 10)
 wall_list.add(wall)
@@ -160,7 +162,8 @@ wall = Wall(740, 45, 30, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-#maziEmaze
+#maizE
+#maze
 
 wall = Wall(740, 90, 40, 10)
 wall_list.add(wall)
