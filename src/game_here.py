@@ -180,6 +180,18 @@ all_sprite_list.add(wall)
 wall = Wall(520, 90, 30, 80)
 wall_list.add(wall)
 all_sprite_list.add(wall)
+
+wall = Wall(700, 380, 90, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(700, 380, 10, 40)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(300, 300, 20, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
 #---Letters-----------------------------------------------
 #The letter that it is is captialized
 
