@@ -1,6 +1,7 @@
 import pygame
 import sys
 
+#_
 #pygame.font.init()
 #myfont = pygame.font.SysFont("monospace", 50)
  
