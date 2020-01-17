@@ -11,6 +11,7 @@ classic_blue = (15, 76, 129)
 tangerine_tango = (221, 65, 36)
 greenery = (136, 176, 75)
 serenity = (176, 205, 223)
+mimosa = (240, 192, 90)
  
 # Screen dimensions
 SCREEN_WIDTH = 800
@@ -111,15 +112,79 @@ all_sprite_list.add(wall)
 #---Spawn walls------------------------------------------
 
 #Spawn wall bottom
-wall = Wall(10, 200, 100, 10)
+wall = Wall(10, 60, 20, 440)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
 #Spawn wall right
-wall = Wall(100, 100, 10, 100)
+wall = Wall(100, 30, 200, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
+wall = Wall(100, 30, 10, 30)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(30, 420, 200, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(50, 390, 400, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(50, 60, 10, 330)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(80, 60, 30, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(330, 10, 220, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(80, 60, 30, 100)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(50, 180, 130, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+
+wall = Wall(250, 400, 200, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+
+wall = Wall(130, 130, 50, 50)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+
+wall = Wall(130, 60, 50, 50)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+
+wall = Wall(200, 60, 10, 100)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+
+wall = Wall(200, 60, 130, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(330, 50, 200, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(520, 90, 30, 80)
+wall_list.add(wall)
+all_sprite_list.add(wall)
 #---Letters-----------------------------------------------
 #The letter that it is is captialized
 
@@ -324,7 +389,7 @@ while not done:
 
     
  
-    screen.fill(serenity)
+    screen.fill(mimosa)
  
     #textsurface = myfont.render("FORTNITE 2", False, (classic_blue))
     #screen.blit(textsurface, (350, 10))
