@@ -1,6 +1,8 @@
 import pygame
 import sys
 
+#pygame.font.init()
+#myfont = pygame.font.SysFont("monospace", 50)
  
 # -- Global constants
  
@@ -18,7 +20,7 @@ pygame.init()
 
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
  
-pygame.display.set_caption('Fortnite 2')
+pygame.display.set_caption('Maize Maze by Kojima Productions')
  
 clock = pygame.time.Clock()
 
@@ -159,6 +161,130 @@ wall = Wall(740, 115, 30, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
+#maiZe
+#maze
+
+wall = Wall(690, 20, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(690, 70, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(700, 50, 10, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(710, 30, 10, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#maize
+#maZe
+
+wall = Wall(690, 90, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(690, 140, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(700, 120, 10, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(710, 100, 10, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#maIze 
+#maze
+
+wall = Wall(670, 20, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#mAize
+#maze
+
+wall = Wall(650, 20, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(620, 20, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(620, 20, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(620, 40, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#maize 
+#mAze
+
+wall = Wall(670, 90, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(640, 90, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(640, 90, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(640, 110, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#Maize 
+#maze
+
+wall = Wall(600, 20, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(570, 20, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(580, 30, 20, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#maize
+#Maze
+
+wall = Wall(620, 90, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(590, 90, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(600, 100, 20, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#---Text border walls---------------------------------
+
+wall = Wall(550, 10, 10, 160)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(550, 160, 240, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+#---Stuff---------------------------------------------
 
 player = Player(25, 25)
 player.walls = wall_list
@@ -195,10 +321,14 @@ while not done:
                 player.changespeed(0, -3)
  
     all_sprite_list.update()
- 
 
+    
+ 
     screen.fill(serenity)
  
+    #textsurface = myfont.render("FORTNITE 2", False, (classic_blue))
+    #screen.blit(textsurface, (350, 10))
+    #pygame.display.flip()
     all_sprite_list.draw(screen)
  
     pygame.display.flip()
