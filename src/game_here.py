@@ -1,7 +1,6 @@
 import pygame
 import sys
 
-
 #pygame.font.init()
 #myfont = pygame.font.SysFont("monospace", 50)
  
@@ -154,26 +153,21 @@ wall = Wall(50, 180, 130, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-
 wall = Wall(250, 400, 200, 20)
 wall_list.add(wall)
 all_sprite_list.add(wall)
-
 
 wall = Wall(130, 130, 50, 50)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-
 wall = Wall(130, 60, 50, 50)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-
 wall = Wall(200, 60, 10, 100)
 wall_list.add(wall)
 all_sprite_list.add(wall)
-
 
 wall = Wall(200, 60, 130, 10)
 wall_list.add(wall)
