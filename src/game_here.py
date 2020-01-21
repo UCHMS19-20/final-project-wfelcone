@@ -1,8 +1,5 @@
 import pygame
 import sys
-
-#pygame.font.init()
-#myfont = pygame.font.SysFont("monospace", 50)
  
 # -- Global constants
  
@@ -394,13 +391,8 @@ while not done:
  
     all_sprite_list.update()
 
-    
- 
     screen.fill(mimosa)
  
-    #textsurface = myfont.render("FORTNITE 2", False, (classic_blue))
-    #screen.blit(textsurface, (350, 10))
-    #pygame.display.flip()
     all_sprite_list.draw(screen)
  
     pygame.display.flip()
