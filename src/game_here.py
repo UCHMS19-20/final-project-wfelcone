@@ -186,7 +186,71 @@ wall = Wall(700, 380, 10, 40)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-wall = Wall(300, 300, 20, 20)
+wall = Wall(210, 90, 170, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(400, 90, 50, 50)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(470, 90, 30, 200)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(520, 190, 250, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(520, 190, 10, 150)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(550, 220, 250, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(550, 220, 10, 100)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(440, 100, 10, 290)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(370, 100, 10, 270)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(380, 160, 40, 30)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(380, 260, 40, 30)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(400, 210, 40, 30)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(400, 310, 40, 30)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(380, 360, 40, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(150, 360, 250, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(120, 340, 10, 60)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(80, 210, 20, 160)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 #---Letters-----------------------------------------------
@@ -359,11 +423,8 @@ player = Player(25, 25)
 player.walls = wall_list
  
 all_sprite_list.add(player)
- 
- 
-done = False
- 
-while not done:
+  
+while True:
  
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
