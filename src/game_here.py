@@ -18,7 +18,7 @@ pygame.init()
 
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
  
-pygame.display.set_caption('Maize Maze by Kojima Productions')
+pygame.display.set_caption('Maize Maze™ by Kojima Productions')
  
 clock = pygame.time.Clock()
 
@@ -65,7 +65,6 @@ class Player(pygame.sprite.Sprite):
                 self.rect.bottom = block.rect.top
             else:
                 self.rect.top = block.rect.bottom
- 
  
 class Wall(pygame.sprite.Sprite):
     """ Wall the player can run into. """
@@ -458,6 +457,6 @@ while True:
  
     pygame.display.flip()
  
-    clock.tick(60)
+    clock.tick(50)
  
 pygame.quit()
