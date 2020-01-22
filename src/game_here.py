@@ -252,6 +252,68 @@ all_sprite_list.add(wall)
 wall = Wall(80, 210, 20, 160)
 wall_list.add(wall)
 all_sprite_list.add(wall)
+
+wall = Wall(560, 250, 200, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(580, 280, 210, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(580, 310, 190, 30)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(700, 360, 70, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(470, 310, 30, 110)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(470, 400, 10, 110)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(490, 290, 10, 110)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(500, 400, 70, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(590, 400, 70, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(680, 400, 20, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(500, 360, 180, 20)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(500, 330, 30, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(550, 330, 30, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(550, 300, 10, 40)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(230, 120, 10, 100)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+
 #---Letters-----------------------------------------------
 #The letter that it is is captialized
 
