@@ -16,11 +16,11 @@ pygame.init()
 
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
  
-pygame.display.set_caption('Maize Maze™ by Kojima Productions')
+pygame.display.set_caption('Maize Maze by Kojima Productions')
  
 
 class Player(pygame.sprite.Sprite):
-    """ This class represents the bar at the bottom that the player
+    """ This class represents the square that the player
     controls. """
  
     def __init__(self, x, y):
@@ -38,12 +38,12 @@ class Player(pygame.sprite.Sprite):
         self.walls = None
  
     def changespeed(self, x, y):
-        """ Change the speed of the player. """
+        """ This changes the speed of the player """
         self.change_x += x
         self.change_y += y
  
     def update(self):
-        """ Update the player position. """
+        """ This updates the player position """
         self.rect.x += self.change_x
  
         block_hit_list = pygame.sprite.spritecollide(self, self.walls, False)
@@ -64,9 +64,9 @@ class Player(pygame.sprite.Sprite):
                 self.rect.top = block.rect.bottom
  
 class Wall(pygame.sprite.Sprite):
-    """ Wall the player can run into. """
+    """ Describes the walls """
     def __init__(self, x, y, width, height):
-        """ Constructor for the wall that the player can run into. """
+        """ Constructor for the walls. """
         super().__init__()
  
         self.image = pygame.Surface([width, height])
