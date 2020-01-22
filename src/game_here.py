@@ -4,10 +4,8 @@ import sys
 # -- Global constants
  
 # Colors
-classic_blue = (15, 76, 129)
 tangerine_tango = (221, 65, 36)
 greenery = (136, 176, 75)
-serenity = (176, 205, 223)
 mimosa = (240, 192, 90)
  
 # Screen dimensions
@@ -20,7 +18,6 @@ screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
  
 pygame.display.set_caption('Maize Maze™ by Kojima Productions')
  
-clock = pygame.time.Clock()
 
 class Player(pygame.sprite.Sprite):
     """ This class represents the bar at the bottom that the player
@@ -78,6 +75,7 @@ class Wall(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.y = y
         self.rect.x = x
+
 
 all_sprite_list = pygame.sprite.Group()
 
@@ -344,6 +342,26 @@ all_sprite_list.add(wall)
 wall = Wall(100, 270, 110, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
+
+wall = Wall(240, 290, 110, 10)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(260, 320, 10, 40)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(290, 300, 10, 40)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(320, 320, 20, 40)
+wall_list.add(wall)
+all_sprite_list.add(wall)
+
+wall = Wall(260, 120, 90, 70)
+wall_list.add(wall)
+all_sprite_list.add(wall)
 #---Letters-----------------------------------------------
 #The letter that it is is captialized
 
@@ -520,7 +538,7 @@ while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
- 
+    
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 player.changespeed(-3, 0)
@@ -543,12 +561,13 @@ while True:
  
     all_sprite_list.update()
 
+    pygame.time.delay(20)
+
     screen.fill(mimosa)
  
     all_sprite_list.draw(screen)
  
     pygame.display.flip()
  
-    clock.tick(50)
  
 pygame.quit()
