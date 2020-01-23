@@ -1,21 +1,25 @@
 import pygame
+#Imports pygame
 import sys
- 
-# -- Global constants
- 
-# Colors
+#Imports sys. This is so one can use sys.exit.
+
+#Colors
+#These colors are all Pantone colors of the year, 2017, 2012, and 2009, respectively.
 tangerine_tango = (221, 65, 36)
 greenery = (136, 176, 75)
 mimosa = (240, 192, 90)
  
-# Screen dimensions
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 450
- 
+#Screen dimensions
+screen_width = 800
+screen_height = 450
+
+#Initializes pygame. 
 pygame.init()
 
-screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
+#This sets a value to "screen" using screen_width and screen_height, which I made earlier. 
+screen = pygame.display.set_mode([screen_width, screen_height])
  
+#This allows one to set the text in the upper left corner of the window. 
 pygame.display.set_caption('Maize Maze by Kojima Productions')
  
 
@@ -81,7 +85,8 @@ all_sprite_list = pygame.sprite.Group()
 
 wall_list = pygame.sprite.Group()
 
-#---Exterior walls------------------------------------------
+#Walls
+#Each of these gives x, y, length, and height values to a wall, then adds it to the wall list and the sprite list. 
 
 #Left exterior wall
 wall = Wall(0, 0, 10, 600)
@@ -103,8 +108,6 @@ wall = Wall(10, 440, 780, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-#---Spawn walls------------------------------------------
-
 #Spawn wall bottom
 wall = Wall(10, 60, 20, 440)
 wall_list.add(wall)
@@ -115,6 +118,7 @@ wall = Wall(100, 30, 200, 10)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
+#It is impossible to effectively descibe the position of each individual interior wall. 
 wall = Wall(100, 30, 10, 30)
 wall_list.add(wall)
 all_sprite_list.add(wall)
@@ -386,6 +390,7 @@ all_sprite_list.add(wall)
 wall = Wall(170, 30, 10, 30)
 wall_list.add(wall)
 all_sprite_list.add(wall)
+
 #---Letters-----------------------------------------------
 #The letter that it is is captialized
 
@@ -552,13 +557,18 @@ all_sprite_list.add(wall)
 
 #---Stuff---------------------------------------------
 
+#This sets the position the player spawns at. 
 player = Player(25, 25)
+#
 player.walls = wall_list
- 
+
+#Adds the player to the sprite list.. 
 all_sprite_list.add(player)
   
+#This is the code that is always running. 
 while True:
- 
+
+    # This allows us to close the window when we click the x. 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
