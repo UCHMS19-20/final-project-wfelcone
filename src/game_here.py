@@ -9,48 +9,54 @@ tangerine_tango = (221, 65, 36)
 greenery = (136, 176, 75)
 mimosa = (240, 192, 90)
  
-#Screen dimensions
-screen_width = 800
-screen_height = 450
-
 #Initializes pygame. 
 pygame.init()
 
-#This sets a value to "screen" using screen_width and screen_height, which I made earlier. 
-screen = pygame.display.set_mode([screen_width, screen_height])
+#Sets screen to be 800 x 450. 
+screen = pygame.display.set_mode([800, 450])
  
 #This allows one to set the text in the upper left corner of the window. 
-pygame.display.set_caption('Maize Maze by Kojima Productions')
+pygame.display.set_caption('Maize Maze by Felcone Productions')
  
-
+#This is a class for a sprite. One can use a class to define the aspects of something. This is the class for the player. 
 class Player(pygame.sprite.Sprite):
-    """ This class represents the square that the player
-    controls. """
+    """This class represents the square that the player
+    controls."""
  
+    #A function that is initializaing the aspects of the player. 
     def __init__(self, x, y):
-        super().__init__()
- 
+        """Setting traits of the player"""
+        pygame.sprite.Sprite.__init__(self)
+
+        #Sets the player to be a 15 x 15 square with the color tangerine tango. 
         self.image = pygame.Surface([15, 15])
         self.image.fill(tangerine_tango)
  
+        #Makes a rectangle and gives it an x and y position
         self.rect = self.image.get_rect()
         self.rect.y = y
         self.rect.x = x
  
+        #Sets the base speed (0)
         self.change_x = 0
         self.change_y = 0
+        #Allows the player to detect walls
         self.walls = None
  
+    #A function which allows the speed to be changed. It adds values to the speed. 
     def changespeed(self, x, y):
-        """ This changes the speed of the player """
+        """This changes the speed of the player"""
         self.change_x += x
         self.change_y += y
  
+    #Modifies the player position
     def update(self):
-        """ This updates the player position """
+        """This updates the player position"""
         self.rect.x += self.change_x
  
+        #Checks to see if the player has touched a wall
         block_hit_list = pygame.sprite.spritecollide(self, self.walls, False)
+        #If the player has, the player side is set to touch the side of the wall that it first interacted with. 
         for block in block_hit_list:
             if self.change_x > 0:
                 self.rect.right = block.rect.left
@@ -59,6 +65,7 @@ class Player(pygame.sprite.Sprite):
  
         self.rect.y += self.change_y
  
+        #Same but for y axis. 
         block_hit_list = pygame.sprite.spritecollide(self, self.walls, False)
         for block in block_hit_list:
  
@@ -66,13 +73,13 @@ class Player(pygame.sprite.Sprite):
                 self.rect.bottom = block.rect.top
             else:
                 self.rect.top = block.rect.bottom
- 
+
 class Wall(pygame.sprite.Sprite):
-    """ Describes the walls """
+    """Describes the walls"""
     def __init__(self, x, y, width, height):
-        """ Constructor for the walls. """
-        super().__init__()
- 
+        """Initializaes attributes for walls."""
+        pygame.sprite.Sprite.__init__(self)
+        #Allows us to set attributes of walls. 
         self.image = pygame.Surface([width, height])
         self.image.fill(greenery)
  
@@ -80,14 +87,12 @@ class Wall(pygame.sprite.Sprite):
         self.rect.y = y
         self.rect.x = x
 
-
+#A group of sprites
 all_sprite_list = pygame.sprite.Group()
-
 wall_list = pygame.sprite.Group()
 
 #Walls
 #Each of these gives x, y, length, and height values to a wall, then adds it to the wall list and the sprite list. 
-
 #Left exterior wall
 wall = Wall(0, 0, 10, 600)
 wall_list.add(wall)
@@ -391,7 +396,7 @@ wall = Wall(170, 30, 10, 30)
 wall_list.add(wall)
 all_sprite_list.add(wall)
 
-#---Letters-----------------------------------------------
+#---Letters
 #The letter that it is is captialized
 
 #maize
@@ -559,10 +564,10 @@ all_sprite_list.add(wall)
 
 #This sets the position the player spawns at. 
 player = Player(25, 25)
-#
+#Allows the player to see the location, size of walls. 
 player.walls = wall_list
 
-#Adds the player to the sprite list.. 
+#Adds the player to the sprite list. 
 all_sprite_list.add(player)
   
 #This is the code that is always running. 
@@ -571,8 +576,10 @@ while True:
     # This allows us to close the window when we click the x. 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            pygame.quit()
             sys.exit()
     
+        #If the key is pressed down, speed changes. 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 player.changespeed(-3, 0)
@@ -583,6 +590,7 @@ while True:
             elif event.key == pygame.K_DOWN:
                 player.changespeed(0, 3)
  
+        #When the key comes up, that change is reversed. 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT:
                 player.changespeed(3, 0)
@@ -593,15 +601,20 @@ while True:
             elif event.key == pygame.K_DOWN:
                 player.changespeed(0, -3)
  
+    #Updates sprite list
     all_sprite_list.update()
 
+    #Sets how often everything runs. 
     pygame.time.delay(20)
 
+    #Fills screen with Pantone Color of the Year 2009. 
     screen.fill(mimosa)
  
+    #Draws sprites on screen. 
     all_sprite_list.draw(screen)
  
+    #Refreshes display. 
     pygame.display.flip()
  
- 
+#Quits pygame. 
 pygame.quit()
