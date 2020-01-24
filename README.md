@@ -1,6 +1,6 @@
-#Maize Maze by Will Felcone
+# Maize Maze by Will Felcone
 
-Maize Maze is an electronic corn maze that they player must completer. The player cannot move through the walls, and so must get to the end only using his or her brain. The stunning color scheme is comprised of three different Pantone Colors of the Year. 
+Maize Maze is an electronic corn maze that they player must complete. The player cannot move through the walls, and so must get to the end only using his or her brain. The stunning color scheme is comprised of three different Pantone Colors of the Year. 
 
 The Player is controlled by the arrow keys, and can press two at the same time to move diagonally. The player starts in the upper left corner and must make his or her way to the lower right corner. 
 
