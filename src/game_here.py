@@ -574,6 +574,9 @@ all_sprite_list.add(player)
 while True:
 
     # This allows us to close the window when we click the x. 
+    if self.rect.y == 430 and self.rect.x == 780:
+        sys.exit()
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -600,6 +603,8 @@ while True:
                 player.changespeed(0, 3)
             elif event.key == pygame.K_DOWN:
                 player.changespeed(0, -3)
+
+        
  
     #Updates sprite list
     all_sprite_list.update()
